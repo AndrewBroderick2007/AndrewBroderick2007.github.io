@@ -221,11 +221,15 @@ window.onload = function()
                     let ItBeCopy = false;
                     for(let j = i-1;j>-1;j--)
                     {
-                        if(rn[0] == AnswerSet[j][0] && rn[1] == AnswerSet[j][1] || rn[0] == Question[0] && rn[1] == Question[1])
+                        if(rn[0] == AnswerSet[j][0] && rn[1] == AnswerSet[j][1])
                         {
                             ItBeCopy = true;
                             break;
                         }
+                    }
+                    if(rn[0] == Question[0] && rn[1] == Question[1])
+                    {
+                        ItBeCopy = true;
                     }
                     while(ItBeCopy)
                     {
@@ -233,11 +237,15 @@ window.onload = function()
                         rn = [Math.floor(Math.random()*2),Math.floor(Math.random()*12)];
                         for(let j = i-1;j>-1;j--)
                         {
-                            if(rn[0] == AnswerSet[j][0] && rn[1] == AnswerSet[j][1] || rn[0] == Question[0] && rn[1] == Question[1])
+                            if(rn[0] == AnswerSet[j][0] && rn[1] == AnswerSet[j][1])
                             {
                                 ItBeCopy = true;
                                 break;
                             }
+                        }
+                        if(rn[0] == Question[0] && rn[1] == Question[1])
+                        {
+                            ItBeCopy = true;
                         }
                     }
                     AnswerSet[i] = rn;
